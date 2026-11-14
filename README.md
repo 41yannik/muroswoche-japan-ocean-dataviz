@@ -4,8 +4,8 @@
 
 **誰がどこに棲み、誰が消えるのか？**
 
-109 shark species of Sagami Bay, Japan. One light per species, at the depth where it lives,<br>
-coloured by its IUCN Red List status. Built during Muros Week Tokyo 2026.
+109 shark species off Japan, placed on the seabed of Sagami Bay. One light per species,<br>
+at the depth where it lives, coloured by its IUCN Red List status. Built during Muros Week Tokyo 2026.
 
 ![Arduino](https://img.shields.io/badge/Arduino-UNO_R4_WiFi-00878F?logo=arduino&logoColor=white)
 ![FastLED](https://img.shields.io/badge/FastLED-WS2812B-E34F26)
