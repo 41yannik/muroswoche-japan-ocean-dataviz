@@ -1,18 +1,45 @@
+<div align="center">
+
 # Who lives where, and who disappears?
 
 **誰がどこに棲み、誰が消えるのか？**
 
-109 shark species off Japan, from the shore to the deep sea of Sagami Bay. One light per species, placed at the depth where it lives, coloured by its IUCN Red List status. A laser-cut wooden depth model, an Arduino light cycle, a screen visualization and a short bilingual deck. Built during Muros Week Tokyo 2026.
+109 shark species of Sagami Bay, Japan. One light per species, at the depth where it lives,<br>
+coloured by its IUCN Red List status. Built during Muros Week Tokyo 2026.
 
-![The finished exhibit: the lit depth model next to the presentation](docs/images/07-exhibit.jpg)
+![Arduino](https://img.shields.io/badge/Arduino-UNO_R4_WiFi-00878F?logo=arduino&logoColor=white)
+![FastLED](https://img.shields.io/badge/FastLED-WS2812B-E34F26)
+![Blender](https://img.shields.io/badge/Blender-Python-F5792A?logo=blender&logoColor=white)
+![Python](https://img.shields.io/badge/Python-data_pipeline-3776AB?logo=python&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-web_view-BC52EE?logo=astro&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-3D-000000?logo=threedotjs&logoColor=white)
+![Code: MIT](https://img.shields.io/badge/code-MIT-blue)
+![Content: CC BY 4.0](https://img.shields.io/badge/content-CC_BY_4.0-lightgrey)
 
-## What the object shows
+[The object](#the-object) · [Process](#process) · [Digital side](#digital-side) · [Run it](#run-it) · [Release](../../releases/tag/v1.0) · [Deck (PDF)](docs/who-disappears.pdf)
 
-- **Height is depth.** The model follows a real seabed transect of Sagami Bay (SRTM15+): 19.3 km from the coast down to 1,305 m. Scale: 1 cm of model height is 125.6 m of water.
-- **Colour is threat.** Blue: not threatened (63 species). Yellow: vulnerable (23). Orange: endangered (19). Red: critically endangered (4). 46 of 109 species are threatened.
+<img src="docs/images/07-exhibit.jpg" alt="The finished exhibit: the lit depth model next to the presentation" width="720">
+
+</div>
+
+## At a glance
+
+| | |
+|---|---|
+| **109** | shark species, one addressable LED each |
+| **46** | of them threatened (Red List: vulnerable, endangered or critically endangered) |
+| **19.3 km** | real seabed transect of Sagami Bay, from the coast down to **1,305 m** |
+| **1 cm = 125.6 m** | model height to water depth |
+| **18 + 5** | laser-cut profile pieces and slotted cross bands, 2 mm wood |
+| **8** | LED strands, driven by one Arduino UNO R4 WiFi |
+
+## The object
+
+- **Height is depth.** The model follows a real seabed transect of Sagami Bay (SRTM15+): 19.3 km from the coast down to 1,305 m.
+- **Colour is threat.** Blue: not threatened (63 species). Yellow: vulnerable (23). Orange: endangered (19). Red: critically endangered (4).
 - **Threatened sharks live shallower.** The median depth of the not-threatened species is 408 m; for vulnerable and endangered species it is 100 m, for critically endangered ones 85 m.
 
-### The light cycle, "Who disappears"
+### The light cycle: "Who disappears"
 
 1. **All lights on.** For 30 seconds all 109 species glow in their Red List colour.
 2. **Threatened species blink.** The 46 yellow, orange and red species blink three times. Blue stays on.
@@ -21,6 +48,8 @@
 A thought experiment, not a forecast.
 
 ## Process
+
+From a seabed dataset to a lit wooden object in seven steps.
 
 | | |
 |---|---|
@@ -32,26 +61,17 @@ A thought experiment, not a forecast.
 | ![Testing the wired lattice](docs/images/06-assembly-test.jpg) | **6. Wiring and test.** An Arduino UNO R4 WiFi drives the 8 strands from pins 2 to 9, with a 5 V supply. On power-up a self-test lights 1 LED on S1, 2 on S2, up to 8 on S8. |
 | ![The finished exhibit](docs/images/07-exhibit.jpg) | **7. Exhibit.** The lit model next to the presentation. A screen visualization can run beside it and steer the board over USB. |
 
-The final four-slide deck is in [`docs/who-disappears.pdf`](docs/who-disappears.pdf), the interactive version in [`presentation/`](presentation/).
+## Digital side
 
-## Repository layout
+**Screen visualization** ([`web/`](web/)). A loop in two chapters: the camera starts above Sagami Bay and sinks along the slope, stopping at seven real species from the scalloped hammerhead to the leafscale gulper shark at their depth; then it plays the act "Who disappears" in step with the LEDs. In Chrome the page connects to the board over Web Serial and steers the light cycle.
 
-```
-data/
-  processed/        curated species table, names, LED time series, seabed profile, land profile
-  raw/bathymetrie/  SRTM15+ height grid of Sagami Bay
-scripts/            data steps for the web view and the Arduino (Python)
-modell/             Blender and laser pipeline (Python, partly run inside Blender)
-  export/laser_v1/  cut files (SVG and PDF), parts lists, assembly guides, LED carrier STLs
-arduino/
-  hai_zeitreise/    the sketch (FastLED, 8 strands, 109 LEDs)
-  host_test/        host-side test of the serial remote parser
-web/                screen visualization (Astro, Three.js, GSAP, Tailwind)
-presentation/       self-contained HTML deck with the interactive 3D model
-docs/               deck PDF and process photos
-```
+![Web visualization of Sagami Bay with sharks at their depth](docs/images/08-web-view.jpg)
 
-## Pipeline
+**Presentation** ([`presentation/`](presentation/)). A self-contained bilingual deck with the laser model as an interactive 3D view. Four slides, also as [PDF](docs/who-disappears.pdf).
+
+![Presentation title slide with the interactive 3D model](docs/images/09-presentation.jpg)
+
+## How it is built
 
 ```
 SRTM15+ grid ──> modell/fetch_sagami.py ──> sagami_profil.csv ──> modell/land_sagami.py ──> sagami_land.csv
@@ -72,6 +92,23 @@ hai_tiefenmodell_master.csv ──> scripts/build_web_daten.py ──> web/src/d
 ```
 
 `data/processed/hai_tiefenmodell_master.csv` is the curated species table (species, order, Red List category, depth, LED id). It was assembled by hand from the sources below and is not generated by a script.
+
+### Repository layout
+
+```
+data/
+  processed/        curated species table, names, LED time series, seabed profile, land profile
+  raw/bathymetrie/  SRTM15+ height grid of Sagami Bay
+scripts/            data steps for the web view and the Arduino (Python)
+modell/             Blender and laser pipeline (Python, partly run inside Blender)
+  export/laser_v1/  cut files (SVG and PDF), parts lists, assembly guides, LED carrier STLs
+arduino/
+  hai_zeitreise/    the sketch (FastLED, 8 strands, 109 LEDs)
+  host_test/        host-side test of the serial remote parser
+web/                screen visualization (Astro, Three.js, GSAP, Tailwind)
+presentation/       self-contained HTML deck with the interactive 3D model
+docs/               deck PDF, process photos and screenshots
+```
 
 ## Run it
 
@@ -120,8 +157,6 @@ npm test           # vitest
 npm run build      # static build in web/dist
 ```
 
-In Chrome the page can connect to the board over Web Serial and steer the light cycle.
-
 ### Presentation
 
 Open `presentation/index.html` in a current browser. No server, build step or network access needed. Details in [`presentation/README.md`](presentation/README.md).
@@ -136,6 +171,6 @@ Open `presentation/index.html` in a current browser. No server, build step or ne
 
 ## Licence
 
-Code (Python, Arduino, web, presentation scripts) is released under the [MIT licence](LICENSE). Photos, cut files, model files and the deck are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Third-party data keeps its original licence and terms. The bundled fonts in `presentation/assets/` (Zen Kaku Gothic New) are under the SIL Open Font License, see [`presentation/assets/OFL.txt`](presentation/assets/OFL.txt).
+Code (Python, Arduino, web, presentation scripts) is released under the [MIT licence](LICENSE). Photos, screenshots, cut files, model files and the deck are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Third-party data keeps its original licence and terms. The bundled fonts in `presentation/assets/` (Zen Kaku Gothic New) are under the SIL Open Font License, see [`presentation/assets/OFL.txt`](presentation/assets/OFL.txt).
 
 Faces in the process photos are blurred.
