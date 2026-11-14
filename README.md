@@ -136,6 +136,6 @@ Open `presentation/index.html` in a current browser. No server, build step or ne
 
 ## Licence
 
-Code (Python, Arduino, web, presentation scripts) is released under the [MIT licence](LICENSE). Photos, cut files, model files and the deck are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Third-party data keeps its original licence and terms. The bundled fonts in `presentation/assets/` (Zen Kaku Gothic New) are under the SIL Open Font License.
+Code (Python, Arduino, web, presentation scripts) is released under the [MIT licence](LICENSE). Photos, cut files, model files and the deck are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Third-party data keeps its original licence and terms. The bundled fonts in `presentation/assets/` (Zen Kaku Gothic New) are under the SIL Open Font License, see [`presentation/assets/OFL.txt`](presentation/assets/OFL.txt).
 
 Faces in the process photos are blurred.
