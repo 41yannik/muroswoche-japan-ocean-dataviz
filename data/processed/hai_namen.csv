@@ -1,0 +1,110 @@
+led_id,species,name_en,name_ja,quelle
+1,Triakis semifasciata,Leopard shark,カリフォルニアドチザメ,en.wikipedia: Leopard shark
+2,Sphyrna zygaena,Smooth hammerhead,シロシュモクザメ,en.wikipedia: Smooth hammerhead
+3,Sphyrna lewini,Scalloped hammerhead,アカシュモクザメ,en.wikipedia: Scalloped hammerhead
+4,Carcharhinus limbatus,Blacktip shark,カマストガリザメ,en.wikipedia: Blacktip shark
+5,Carcharhinus leucas,Bull shark,オオメジロザメ,en.wikipedia: Bull shark
+6,Carcharias taurus,Sand tiger shark,シロワニ,en.wikipedia: Sand tiger shark
+7,Triaenodon obesus,Whitetip reef shark,ネムリブカ,en.wikipedia: Whitetip reef shark
+8,Chiloscyllium plagiosum,Whitespotted bamboo shark,,en.wikipedia: Whitespotted bamboo shark
+9,Mustelus manazo,Starspotted smooth-hound,ホシザメ,en.wikipedia: Starspotted smooth-hound
+10,Mustelus griseus,Spotless smooth-hound,シロザメ,en.wikipedia: Spotless smooth-hound
+11,Carcharhinus sorrah,Spot-tail shark,,en.wikipedia: Spot-tail shark
+12,Carcharhinus melanopterus,Blacktip reef shark,ツマグロ,en.wikipedia: Blacktip reef shark
+13,Notorynchus cepedianus,Broadnose sevengill shark,エビスザメ,en.wikipedia: Broadnose sevengill shark
+14,Carcharhinus plumbeus,Sandbar shark,メジロザメ,en.wikipedia: Sandbar shark
+15,Negaprion acutidens,Sicklefin lemon shark,レモンザメ,en.wikipedia: Sicklefin lemon shark
+16,Alopias superciliosus,Bigeye thresher,ハチワレ,en.wikipedia: Bigeye thresher
+17,Carcharhinus brevipinna,Spinner shark,ハナザメ,en.wikipedia: Spinner shark
+18,Carcharhinus dussumieri,Whitecheek shark,,en.wikipedia: Whitecheek shark
+19,Carcharhinus tjutjot,,スミツキザメ,en.wikipedia: Carcharhinus tjutjot
+20,Rhincodon typus,Whale shark,ジンベエザメ,en.wikipedia: Whale shark
+21,Heterodontus japonicus,Japanese bullhead shark,ネコザメ,en.wikipedia: Japanese bullhead shark
+22,Galeocerdo cuvier,Tiger shark,イタチザメ,en.wikipedia: Tiger shark
+23,Alopias pelagicus,Pelagic thresher,ニタリ,en.wikipedia: Pelagic thresher
+24,Proscyllium habereri,Graceful catshark,,en.wikipedia: Graceful catshark
+25,Proscyllium venustum,,,en.wikipedia: Proscyllium venustum
+26,Triakis scyllium,Banded houndshark,ドチザメ,en.wikipedia: Banded houndshark
+27,Lamna ditropis,Salmon shark,ネズミザメ,en.wikipedia: Salmon shark
+28,Halaelurus buergeri,Blackspotted catshark,,en.wikipedia: Blackspotted catshark
+29,Pristiophorus cirratus,Longnose sawshark,,en.wikipedia: Longnose sawshark
+30,Hemitriakis complicofasciata,Ocellate topeshark,,en.wikipedia: Ocellate topeshark
+31,Alopias vulpinus,Common thresher,マオナガ,en.wikipedia: Common thresher
+32,Heterodontus zebra,Zebra bullhead shark,シマネコザメ,en.wikipedia: Zebra bullhead shark
+33,Orectolobus japonicus,Japanese wobbegong,オオセ,en.wikipedia: Japanese wobbegong
+34,Pseudocarcharias kamoharai,Crocodile shark,ミズワニ,en.wikipedia: Crocodile shark
+35,Squatina nebulosa,Clouded angelshark,,en.wikipedia: Clouded angelshark
+36,Prionace glauca,Blue shark,ヨシキリザメ,en.wikipedia: Blue shark
+37,Carcharodon carcharias,Great white shark,ホホジロザメ,en.wikipedia: Great white shark
+38,Isurus oxyrinchus,Shortfin mako shark,アオザメ,en.wikipedia: Shortfin mako shark
+39,Heterodontus portusjacksoni,Port Jackson shark,ポートジャクソンネコザメ,en.wikipedia: Port Jackson shark
+40,Scyliorhinus torazame,Cloudy catshark,トラザメ,en.wikipedia: Cloudy catshark
+41,Megachasma pelagios,Megamouth shark,メガマウス,en.wikipedia: Megamouth shark
+42,Squalus brevirostris,Japanese shortnose spurdog,,en.wikipedia: Japanese shortnose spurdog
+43,Squatina japonica,Japanese angelshark,カスザメ,en.wikipedia: Japanese angelshark
+44,Squalus acanthias,Spiny dogfish,,en.wikipedia: Spiny dogfish
+45,Carcharhinus brachyurus,Copper shark,クロヘリメジロザメ,en.wikipedia: Copper shark
+46,Hemitriakis japanica,Japanese topeshark,エイラクブカ,en.wikipedia: Japanese topeshark
+47,Isistius plutodus,Largetooth cookiecutter shark,コヒレダルマザメ,en.wikipedia: Largetooth cookiecutter shark
+48,Squaliolus laticaudus,Spined pygmy shark,オオメコビトザメ,en.wikipedia: Spined pygmy shark
+49,Etmopterus splendidus,Splendid lanternshark,フトシミフジクジラ,en.wikipedia: Splendid lanternshark
+50,Oxynotus japonicus,Japanese roughshark,オロシザメ,en.wikipedia: Japanese roughshark
+51,Squalus japonicus,Japanese spurdog,,en.wikipedia: Japanese spurdog
+52,Carcharhinus falciformis,Silky shark,クロトガリザメ,en.wikipedia: Silky shark
+53,Mitsukurina owstoni,Goblin shark,ミツクリザメ,en.wikipedia: Goblin shark
+54,Pristiophorus japonicus,Japanese sawshark,,en.wikipedia: Japanese sawshark
+55,Cirrhoscyllium japonicum,Saddle carpetshark,,en.wikipedia: Saddle carpetshark
+56,Squalus mitsukurii,Shortspine spurdog,,en.wikipedia: Shortspine spurdog
+57,Heptranchias perlo,Sharpnose sevengill shark,エドアブラザメ,en.wikipedia: Sharpnose sevengill shark
+58,Carcharhinus obscurus,Dusky shark,ドタブカ,en.wikipedia: Dusky shark
+59,Centrophorus atromarginatus,Dwarf gulper shark,アイザメ,en.wikipedia: Dwarf gulper shark
+60,Trigonognathus kabeyai,Viper dogfish,ワニグチツノザメ,en.wikipedia: Viper dogfish
+61,Galeus nipponensis,Broadfin sawtail catshark,,en.wikipedia: Broadfin sawtail catshark
+62,Hexanchus nakamurai,Bigeyed sixgill shark,シロカグラ,en.wikipedia: Bigeyed sixgill shark
+63,Etmopterus molleri,Slendertail lanternshark,,en.wikipedia: Slendertail lanternshark
+64,Etmopterus lucifer,Blackbelly lanternshark,,en.wikipedia: Blackbelly lanternshark
+65,Centrophorus tessellatus,Mosaic gulper shark,,en.wikipedia: Mosaic gulper shark
+66,Cephaloscyllium isabella,Draughtsboard shark,,en.wikipedia: Draughtsboard shark
+67,Hexanchus griseus,Bluntnose sixgill shark,カグラザメ,en.wikipedia: Bluntnose sixgill shark
+68,Cirrhigaleus barbifer,Mandarin dogfish,,en.wikipedia: Mandarin dogfish
+69,Carcharhinus albimarginatus,Silvertip shark,ツマジロ,en.wikipedia: Silvertip shark
+70,Centrophorus granulosus,Gulper shark,,en.wikipedia: Gulper shark
+71,Dalatias licha,Kitefin shark,ヨロイザメ,en.wikipedia: Kitefin shark
+72,Somniosus pacificus,Pacific sleeper shark,オンデンザメ,en.wikipedia: Pacific sleeper shark
+73,Centroscymnus owstonii,Roughskin dogfish,ユメザメ,en.wikipedia: Roughskin dogfish
+74,Cephaloscyllium umbratile,Blotchy swellshark,ナヌカザメ,en.wikipedia: Blotchy swellshark
+75,Galeus longirostris,Longnose sawtail catshark,,en.wikipedia: Longnose sawtail catshark
+76,Apristurus gibbosus,Humpback catshark,,en.wikipedia: Humpback catshark
+77,Etmopterus pusillus,Smooth lanternshark,カラスザメ,en.wikipedia: Smooth lanternshark
+78,Etmopterus brachyurus,Short-tail lanternshark,,en.wikipedia: Short-tail lanternshark
+79,Centroscyllium ritteri,Whitefin dogfish,,en.wikipedia: Whitefin dogfish
+80,Deania calceus,Birdbeak dogfish,,en.wikipedia: Birdbeak dogfish
+81,Galeus eastmani,Gecko catshark,,en.wikipedia: Gecko catshark
+82,Isistius brasiliensis,Cookiecutter shark,ダルマザメ,en.wikipedia: Cookiecutter shark
+83,Apristurus japonicus,Japanese catshark,,en.wikipedia: Japanese catshark
+84,Squalus montalbani,,,en.wikipedia: Squalus montalbani
+85,Odontaspis noronhai,Bigeye sand tiger,ビッグアイ・サンド・タイガー,en.wikipedia: Bigeye sand tiger
+86,Apristurus platyrhynchus,Spatulasnout catshark,,en.wikipedia: Spatulasnout catshark
+87,Etmopterus bigelowi,Blurred lanternshark,リュウキュウカラスザメ,en.wikipedia: Blurred lanternshark
+88,Apristurus pinguis,Bulldog catshark,,en.wikipedia: Bulldog catshark
+89,Deania quadrispinosa,Longsnout dogfish,,en.wikipedia: Longsnout dogfish
+90,Scymnodon ichiharai,Japanese velvet dogfish,イチハラビロウドザメ,en.wikipedia: Japanese velvet dogfish
+91,Squalus suckleyi,Pacific spiny dogfish,アブラツノザメ,en.wikipedia: Pacific spiny dogfish
+92,Zameus squamulosus,Velvet dogfish,,en.wikipedia: Velvet dogfish
+93,Apristurus brunneus,Brown catshark,,en.wikipedia: Brown catshark
+94,Parmaturus melanobranchus,Blackgill catshark,,en.wikipedia: Blackgill catshark
+95,Apristurus herklotsi,Longfin catshark,,en.wikipedia: Longfin catshark
+96,Chlamydoselachus anguineus,Frilled shark,ラブカ,en.wikipedia: Frilled shark
+97,Somniosus longus,Frog shark,,en.wikipedia: Frog shark
+98,Parmaturus pilosus,Salamander shark,,en.wikipedia: Salamander shark
+99,Pseudotriakis microdon,False catshark,チヒロザメ,en.wikipedia: False catshark
+100,Centroscyllium kamoharai,Bareskin dogfish,,en.wikipedia: Bareskin dogfish
+101,Apristurus longicephalus,Longhead catshark,,en.wikipedia: Longhead catshark
+102,Apristurus fedorovi,Fedorov's catshark,,en.wikipedia: Fedorov's catshark
+103,Apristurus macrorhynchus,Flathead catshark,,en.wikipedia: Flathead catshark
+104,Etmopterus unicolor,Brown lanternshark,ニセカラスザメ,en.wikipedia: Brown lanternshark
+105,Deania hystricosa,Rough longnose dogfish,,en.wikipedia: Rough longnose dogfish
+106,Squaliolus aliae,Smalleye pygmy shark,ツラナガコビトザメ,en.wikipedia: Smalleye pygmy shark
+107,Etmopterus princeps,Great lanternshark,,en.wikipedia: Great lanternshark
+108,Centroscymnus coelolepis,Portuguese dogfish,,en.wikipedia: Portuguese dogfish
+109,Centrophorus squamosus,Leafscale gulper shark,,en.wikipedia: Leafscale gulper shark

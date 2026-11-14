@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#031620">
+  <title>Who disappears? | 誰が消えるのか？</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="deck" aria-live="polite">
+  <section class="slide active" id="slide-1" aria-labelledby="title-1">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">109 species · one light each</p>
+        <h1 id="title-1">Who lives where,<br>and who disappears?<span class="ja" lang="ja">誰がどこに棲み、<br>誰が消えるのか？</span></h1>
+        <p class="lede">109 shark species off Japan, from the shore to the deep sea. One light per species, placed at the depth where it lives.<span class="ja" lang="ja">日本近海のサメ109種、沿岸から深海まで。1種につき1つの光を、その種が棲む水深に置く。</span></p>
+      </div>
+      <figure class="hero-art model-view" data-model="cover"><canvas aria-label="Interactive three-dimensional laser-cut model of Sagami Bay with all 109 species lights"></canvas><img src="assets/model.jpg" alt="Physical wooden model of Sagami Bay with coloured lights marking shark species by depth"><figcaption>Drag to inspect · 3D source model</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-2" aria-labelledby="title-2" hidden>
+    <header class="slide-head"><h2 id="title-2">Threatened sharks live shallower<span class="ja" lang="ja">絶滅危惧のサメは浅い海に棲む</span></h2><p><strong>46 of 109</strong> species are threatened<br><span lang="ja">109種のうち46種が絶滅危惧</span></p></header>
+    <div class="data-grid">
+      <div class="stats" aria-label="Species counts and median depth by conservation status">
+        <div class="stat lc"><strong>63</strong><span>not threatened<br><b lang="ja">危険度が低い</b></span><small>median 408 m</small></div>
+        <div class="stat vu"><strong>23</strong><span>vulnerable<br><b lang="ja">危急</b></span><small>median 100 m</small></div>
+        <div class="stat en"><strong>19</strong><span>endangered<br><b lang="ja">危機</b></span><small>median 100 m</small></div>
+        <div class="stat cr"><strong>4</strong><span>critically endangered<br><b lang="ja">深刻な危機</b></span><small>median 85 m</small></div>
+      </div>
+      <div class="chart"><canvas id="scatter" role="img" aria-label="Scatter plot of all 109 shark species by conservation status and depth from zero to 1,305 metres"></canvas><div class="axis"><span>Depth · 水深 0 m</span><span>250 m</span><span>500 m</span><span>750 m</span><span>1,000 m</span><span>1,250 m</span></div></div>
+      <div class="sources"><div><strong>Threat 危険度</strong>IUCN Red List: 46 of 109 species threatened<span class="ja" lang="ja">109種のうち46種が絶滅危惧</span></div><div><strong>Depth 水深</strong>OBIS sightings, else FishBase or Wikipedia<span class="ja" lang="ja">OBISの出現記録、なければ文献値</span></div><div><strong>Seabed 海底地形</strong>SRTM15+: Sagami Bay, 19.3 km to 1,305 m<span class="ja" lang="ja">相模湾：19.3kmで水深1,305m</span></div></div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-3" aria-labelledby="title-3" hidden>
+    <header class="slide-head"><h2 id="title-3">From data to object<span class="ja" lang="ja">データから模型へ</span></h2></header>
+    <div class="build-grid">
+      <figure class="photo"><img src="assets/construction.jpg" alt="Hands assembling the laser-cut wooden lattice of the physical model"><figcaption>Authentic construction view</figcaption></figure>
+      <div class="steps">
+        <article><b>01</b><h3>Seabed to 3D · <span lang="ja">海底を3Dに</span></h3><p>Blender turns the Sagami Bay profile into a slope with 109 light positions.</p><p lang="ja">相模湾の断面をBlenderで斜面にし、109の光の位置を決める。</p></article>
+        <article><b>02</b><h3>Laser-cut lattice · <span lang="ja">レーザー加工の骨組み</span></h3><p>18 profile boards of 2 mm wood, held together by 5 slotted cross bands.</p><p lang="ja">厚さ2mmの木板18枚を、5本の横材で組み合わせる。</p></article>
+        <article><b>03</b><h3>109 lights · <span lang="ja">109の光</span></h3><p>One addressable LED per species, wired in 8 strands between the boards.</p><p lang="ja">1種につきLED1個。8本の配線で板の間をつなぐ。</p></article>
+        <article><b>04</b><h3>Arduino · <span lang="ja">制御</span></h3><p>An Arduino UNO R4 WiFi plays the light cycle; a 5 V supply powers it all.</p><p lang="ja">Arduino UNO R4 WiFiが光のサイクルを動かす。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="slide-4" aria-labelledby="title-4" hidden>
+    <header class="slide-head"><h2 id="title-4">Who disappears<span class="ja" lang="ja">誰が消えるのか</span></h2><p>A live cycle of all <strong>109 lights</strong></p></header>
+    <div class="cycle-grid">
+      <figure class="light-field model-view" data-model="cycle"><canvas aria-label="Interactive three-dimensional model cycling all 109 species lights"></canvas><img src="assets/model.jpg" alt="Physical model with coloured species lights"><figcaption>Drag to inspect · live 109-light cycle</figcaption></figure>
+      <div class="cycle-side">
+        <div class="status" aria-live="polite"><strong id="phase">Ready: all 109 species</strong><span id="timer">Press Play to begin the 30-second opening.</span></div>
+        <div class="controls"><button id="play">Play</button><button id="replay">Replay</button><button id="speed" aria-pressed="false">Fast preview ×8</button></div>
+        <div class="cycle-steps">
+          <article><b>1</b><div><h3>All lights on</h3><p>For 30 seconds all 109 species glow. Height shows depth, colour shows the Red List status.<br><span lang="ja">30秒間、109種すべてが光る。高さは水深、色はレッドリストの評価。</span></p></div></article>
+          <article><b>2</b><div><h3>Threatened species blink</h3><p>The 46 threatened species, yellow, orange and red, blink three times. Blue stays on.<br><span lang="ja">黄・橙・赤の絶滅危惧46種が3回点滅する。青は光り続ける。</span></p></div></article>
+          <article><b>3</b><div><h3>They go dark, one by one</h3><p>Red goes dark first, then orange, then yellow. Only the 63 blue species remain, then all lights return.<br><span lang="ja">赤、橙、黄の順に消え、青の63種だけが残る。その後、すべての光が戻る。</span></p></div></article>
+        </div>
+        <p class="disclaimer">A thought experiment, not a forecast. <span lang="ja">これは予測ではなく思考実験です。</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+<nav class="edge-nav" aria-label="Slide navigation"><button id="prev" aria-label="Previous slide">←</button><button id="next" aria-label="Next slide">→</button></nav>
+<noscript><style>.slide{position:relative!important;display:block!important;visibility:visible!important;opacity:1!important;min-height:100vh}.deck{height:auto!important}nav{display:none!important}body{overflow:auto!important}</style></noscript>
+<script src="assets/arten.js"></script><script src="assets/model-data.js"></script><script src="model-runtime.js"></script><script src="deck.js"></script>
+</body>
+</html>

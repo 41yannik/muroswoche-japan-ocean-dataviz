@@ -1,0 +1,20 @@
+# local environments and caches
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# web build output
+web/node_modules/
+web/dist/
+web/.astro/
+
+# Blender files ship as GitHub Release assets
+*.blend
+*.blend1
+
+# local agent and session files
+.claude/
+.task-journal.md
+.code-guardian*
+.audit-log.md

@@ -1,0 +1,101 @@
+{
+ "datum": "2026-11-12",
+ "quelle": "hang_sagami_endmodell_v4_mit_waenden.blend / Hang_Endmodell_Druck",
+ "skalierung": 1.07527,
+ "modell_mm": [
+  300.0,
+  280.6,
+  271.4
+ ],
+ "tiefe_massstab": "1 cm = 125.6 m",
+ "plattendicke_mm": 2.0,
+ "schlitzbreite_mm": 1.9,
+ "kerf_mm": 0.1,
+ "scheiben": 18,
+ "abstand_mitte_mm": 17.529,
+ "luft_zwischen_scheiben_mm": 15.529,
+ "bandbreite_mm": 20.0,
+ "querbaender_y_mm": [
+  21.9,
+  54.9,
+  95.2,
+  145.8,
+  264.8
+ ],
+ "led_verschiebung_x_mm": {
+  "median": 3.43,
+  "max": 8.59
+ },
+ "testleiste_schlitze_mm": [
+  1.7,
+  1.8,
+  1.9,
+  2.0,
+  2.1,
+  2.2
+ ],
+ "bretter": [
+  {
+   "brett": 1,
+   "teile": [
+    "S-L",
+    "B"
+   ],
+   "schnittlaenge_mm": 2497.1
+  },
+  {
+   "brett": 2,
+   "teile": [
+    "S-R",
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ],
+   "schnittlaenge_mm": 5522.6
+  },
+  {
+   "brett": 3,
+   "teile": [
+    "P01",
+    "P07",
+    "P10",
+    "P14",
+    "P15",
+    "Q5"
+   ],
+   "schnittlaenge_mm": 5801.9
+  },
+  {
+   "brett": 4,
+   "teile": [
+    "P04",
+    "P06",
+    "P08",
+    "P09",
+    "P13"
+   ],
+   "schnittlaenge_mm": 4989.1
+  },
+  {
+   "brett": 5,
+   "teile": [
+    "P02",
+    "P03",
+    "P05",
+    "P11",
+    "P12",
+    "P16"
+   ],
+   "schnittlaenge_mm": 5785.3
+  }
+ ],
+ "checks": {
+  "polygone_gueltig_einteilig": true,
+  "min_ueberlappung_streifen_querband_mm": 10.81,
+  "bretter_benutzt": 5,
+  "leds_zugeordnet": 109,
+  "min_luft_led_querband_mm": 1.19
+ },
+ "gesamt_schnittlaenge_m": 24.6
+}

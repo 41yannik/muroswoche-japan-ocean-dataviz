@@ -1,0 +1,76 @@
+@import "tailwindcss";
+/* Both faces ship with the build (OFL-1.1): the exhibition Mac runs without internet. */
+@import "@fontsource/shippori-mincho/600.css";
+@import "@fontsource/shippori-mincho/800.css";
+@import "@fontsource/zen-kaku-gothic-new/500.css";
+@import "@fontsource/zen-kaku-gothic-new/700.css";
+
+@theme {
+  --font-mincho: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+  --font-gothic: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+
+  /* traditional Japanese colours, the same as szene/wasser.ts */
+  --color-shironeri: #f3efe8;
+  --color-kamenozoki: #c6c2b6;
+  --color-asagi: #48929b;
+  --color-hanada: #044f67;
+  --color-ai: #264348;
+  --color-kon: #192236;
+  --color-sumi: #27221f;
+
+  /* the LED colours of the model, the only bright colours on screen */
+  --color-lc: #3a7bff;
+  --color-vu: #ffc000;
+  --color-en: #ff5000;
+  --color-cr: #ff2a2a;
+}
+
+/* The text colour follows the water: ink in the bright shallows, shironeri in the deep.
+   main.ts switches --ink; registering it lets the change fade. */
+@property --ink {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #27221f;
+}
+
+/* A soft shadow in the opposite tone lies right behind every glyph. Around 200 to 300 m the
+   frame holds both the light water towards the surface and the dark water below, and on
+   asagi neither ink reaches 4.5:1 by itself. */
+@property --halo {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgb(243 239 232 / 0.45);
+}
+
+:root {
+  --ink: var(--color-sumi);
+  transition: --ink 900ms ease, --halo 900ms ease;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-kon);
+  color: var(--ink);
+  font-family: var(--font-gothic);
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 0 3px var(--halo), 0 0 22px var(--halo);
+}
+
+.fade {
+  transition: opacity 700ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root,
+  .fade {
+    transition: none;
+  }
+}
+
+button:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}

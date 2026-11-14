@@ -1,0 +1,96 @@
+---
+import "../styles/global.css";
+import { AKT, ARTEN, QUELLEN, STATUS, STUFE, TIEFE, TITEL, UNTERTITEL } from "../texte";
+import { STUFE_FARBE } from "../szene/haie";
+import { SKALA_M } from "../lib/ablauf";
+
+// the two depths of the scale: the end of the sunlit zone and of all light (JAMSTEC GODAC)
+const MARKEN = [0, 200, 1000];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>相模湾 Sagami Bay</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <canvas id="szene" class="fixed inset-0 block h-full w-full touch-none"></canvas>
+
+    <!-- the title, set vertically, the Latin name beside it -->
+    <header class="pointer-events-none fixed left-14 top-12 flex items-start gap-4">
+      <h1 lang="ja" class="font-mincho text-[64px] font-extrabold leading-none tracking-[0.2em] [writing-mode:vertical-rl]">
+        {TITEL.ja}
+      </h1>
+      <p class="pt-1 text-[20px] font-bold leading-snug">
+        {TITEL.en}
+        <span class="block text-[17px] font-medium">{UNTERTITEL.en}</span>
+        <span lang="ja" class="block text-[17px] font-medium">{UNTERTITEL.ja}</span>
+      </p>
+    </header>
+
+    <!-- depth scale: a line from the surface to 1,300 m, the marker moves with the camera -->
+    <div id="skala" class="fade pointer-events-none fixed bottom-[120px] right-[104px] top-[112px] w-0">
+      <span class="absolute inset-y-0 left-0 w-[2px] -translate-x-1/2 bg-current opacity-50"></span>
+      {MARKEN.map((d) => (
+        <span class="absolute left-0 flex -translate-y-1/2 items-center" style={`top:${(d / SKALA_M) * 100}%`}>
+          <span class="h-[2px] w-3 bg-current"></span>
+          <span class="ml-2 text-[16px] font-medium tabular-nums">{d.toLocaleString("en-US")}</span>
+        </span>
+      ))}
+      <div id="marke" class="absolute left-0 top-0">
+        <span class="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-current"></span>
+        <div id="zahl-block" class="absolute right-7 top-0 whitespace-nowrap text-right">
+          <p class="font-mincho text-[160px] font-extrabold leading-[0.9]">
+            <span id="tiefe-zahl">0</span><span class="ml-2 text-[48px] font-semibold">m</span>
+          </p>
+          <p class="mt-1 text-[18px] font-medium"><span lang="ja">{TIEFE.ja}</span> {TIEFE.en}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- the species name, free beside its shark -->
+    <div id="art" class="fade pointer-events-none fixed left-0 top-0 whitespace-nowrap opacity-0">
+      <p id="art-ja" lang="ja" class="text-[40px] font-bold leading-[1.15]"></p>
+      <p class="mt-1 flex items-center gap-3 text-[32px] font-medium leading-tight">
+        <span id="art-punkt" class="h-3 w-3 shrink-0 rounded-full"></span><span id="art-en"></span>
+      </p>
+    </div>
+
+    <!-- the act: one counter, one line -->
+    <section id="akt" class="fade pointer-events-none fixed bottom-[104px] left-14 opacity-0">
+      <p class="font-mincho text-[160px] font-extrabold leading-[0.9]">
+        <span id="zaehler">109</span><span class="ml-3 text-[32px] font-semibold"><span lang="ja">{ARTEN.ja}</span> {ARTEN.en}</span>
+      </p>
+      <p class="mt-5 text-[22px] font-medium">{AKT.en}</p>
+      <p lang="ja" class="mt-1 text-[20px] font-medium">{AKT.ja}</p>
+    </section>
+
+    <footer class="fixed inset-x-0 bottom-0 flex h-16 items-center justify-between gap-8 whitespace-nowrap px-14 text-[15px] font-medium">
+      <ul class="pointer-events-none flex gap-6">
+        {STUFE.map((s, tier) => (
+          <li class="flex items-center gap-2">
+            <span class="h-3 w-3 rounded-full" style={`background:${STUFE_FARBE[tier]}`}></span>
+            <span>{s.en}</span>
+            <span lang="ja">{s.ja}</span>
+          </li>
+        ))}
+      </ul>
+      <p class="pointer-events-none">{QUELLEN}</p>
+      <div class="flex items-center gap-3">
+        <span id="status-punkt" class="h-3 w-3 rounded-full border-2 border-current"></span>
+        <span id="status-text"></span>
+        <button id="verbinden" type="button" class="hidden rounded-full border-2 border-current px-4 py-1 font-bold">
+          {STATUS.button}
+        </button>
+      </div>
+    </footer>
+
+    <script>
+      import { start } from "../main";
+      start();
+    </script>
+  </body>
+</html>
